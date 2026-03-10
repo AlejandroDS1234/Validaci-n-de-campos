@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Form With Messages</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- FORM -->
+
+    <div class="card">
+
+        <h2>Enviar Mensaje</h2>
+        <form id="form">
+            <div class="field">
+                <label>Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="field">
+                <label>Email</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="field">
+                <label>Message</label>
+                <textarea id="text" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Send</button>
+            <div id="response"></div>
+        </form>
+
+    </div>
+
+    <!-- MESSAGE PANEL -->
+
+    <div class="messages">
+        <h3>Mensajes</h3>
+        <div class="message-list" id="messageList"></div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+</html>
